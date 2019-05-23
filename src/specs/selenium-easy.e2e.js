@@ -22,7 +22,7 @@ describe('User interactions', () => {
   });
 
 
-  fit('should be able to move slider (fails by design to gen video)', () => {
+  it('should be able to move slider (fails by design to gen video)', () => {
     $(selectors.advancedExamples).click();
     browser.pause(300); // avoid animation effect
     $(selectors.getExampleButtonByTarget('drag-drop-range')).click();

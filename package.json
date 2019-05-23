@@ -6,10 +6,10 @@
   "scripts": {
     "lint": "eslint --ext .js --ignore-path .gitignore src",
     "lintfix": "eslint --fix --ext .js --ignore-path .gitignore src",
-    "pree2e": "rimraf results/*; mkdirp results/allure-raw",
+    "pree2e": "rimraf _results_/*; mkdirp _results_/allure-raw",
     "e2e": "wdio wdio.conf.js",
-    "report": "allure generate wdio/allure-raw -o results/allure --clean",
-    "postreport": "open http://localhost:8081/index.html && autoreload-server results/allure 8081"
+    "report": "allure generate _results_/allure-raw -o _results_/allure --clean",
+    "postreport": "open http://localhost:8081/index.html && autoreload-server _results_/allure 8081"
   },
   "author": "",
   "license": "MIT",
