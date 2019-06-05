@@ -695,7 +695,7 @@
   dependencies:
     "@types/node" "*"
 
-"@wdio/allure-reporter@^5.7.11":
+"@wdio/allure-reporter@^5.7.11", "@wdio/allure-reporter@^5.9.3":
   version "5.9.3"
   resolved "https://registry.yarnpkg.com/@wdio/allure-reporter/-/allure-reporter-5.9.3.tgz#c62482f8af9e3301d0e9a071d51e9e52f6d6720b"
   integrity sha512-FejbjXLDwVCv16SEKzZF2mqlP/O2wv7RNrEz6SWzohl95Ri3xxQQD/W3rXR56YKQ8CTPexdK03/h5HiLpQbUIA==
@@ -782,7 +782,7 @@
   dependencies:
     "@wdio/config" "^5.9.4"
 
-"@wdio/reporter@^5.7.8", "@wdio/reporter@^5.9.3":
+"@wdio/reporter@^5.9.3":
   version "5.9.3"
   resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-5.9.3.tgz#310a9f3eb31b67d5c7d612db8882a4b1c39326c4"
   integrity sha512-jZ1LOUYINxMzvhJR5wDfnOvE2oeSEjRmvlzh2mZKSz+2gC7tg11XUk89f8KRBUmWL0n8TBTPMCm5Qxe4KOPH3A==
@@ -4928,14 +4928,14 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-wdio-video-reporter@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/wdio-video-reporter/-/wdio-video-reporter-1.4.1.tgz#03ac55c72b1cbcd17ead5b6fc217a7f00c618926"
-  integrity sha512-+fO6i4fuN2TWBaZtsLpRaxTDUoocX9hzvFNrvHZ6KWh8kD5iV5AV4XX9P012LH2aFWKCXOPLV43c/0qXjqQbsA==
+wdio-video-reporter@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/wdio-video-reporter/-/wdio-video-reporter-1.4.3.tgz#5962d7fbf20a56cc4005a5a2987cfc910e8dd108"
+  integrity sha512-ZJEMi59XL1ZEZEYED2+fuHQ67jvfVQd1XVczW8yzVKZLC8+71RVLSyvO5CxukT0NGqQic740iv49qCjR7SZhqg==
   dependencies:
     "@ffmpeg-installer/ffmpeg" "^1.0.17"
-    "@wdio/allure-reporter" "^5.7.11"
-    "@wdio/reporter" "^5.7.8"
+    "@wdio/allure-reporter" "^5.9.3"
+    "@wdio/reporter" "^5.9.3"
     fs-extra "^6.0.1"
     mkdirp "^0.5.1"
 
