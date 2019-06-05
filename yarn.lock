@@ -4916,10 +4916,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-wdio-video-reporter@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/wdio-video-reporter/-/wdio-video-reporter-1.4.0.tgz#d616fda16f9a5c9f55c0762cd53debfed3d0333a"
-  integrity sha512-Scm33avroy1GIhTh8u4BG2STZ6sWQaadJXPoXfrDYd/q/NQ9iL6TbKPNOPCQ9UEbEWn2Z19elmsANWMis5TNVg==
+wdio-video-reporter@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/wdio-video-reporter/-/wdio-video-reporter-1.4.1.tgz#03ac55c72b1cbcd17ead5b6fc217a7f00c618926"
+  integrity sha512-+fO6i4fuN2TWBaZtsLpRaxTDUoocX9hzvFNrvHZ6KWh8kD5iV5AV4XX9P012LH2aFWKCXOPLV43c/0qXjqQbsA==
   dependencies:
     "@ffmpeg-installer/ffmpeg" "^1.0.17"
     "@wdio/allure-reporter" "^5.7.11"
