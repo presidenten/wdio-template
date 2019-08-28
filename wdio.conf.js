@@ -35,6 +35,7 @@ const config = {
       outputDir: './_results_/allure-raw',
       disableWebdriverStepsReporting: true,
       disableWebdriverScreenshotsReporting: true,
+      useCucumberStepReporter: true
     }],
   ],
 
