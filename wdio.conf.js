@@ -1,9 +1,11 @@
 require('module-alias/register');
 require('@babel/register')({
-  presets: [[
-    '@babel/preset-env',
-    { targets: { node: 8 } },
-  ]],
+  presets: [
+    [
+      '@babel/preset-env',
+      { targets: { node: 8 } },
+    ]
+  ],
   babelrc: false,
 });
 
@@ -11,7 +13,7 @@ const video = require('wdio-video-reporter');
 
 const config = {
   // Setup the browser window
-  before: function (capabilities, specs) {
+  before: function(capabilities, specs) {
     browser.setWindowPosition(0, 0);
     browser.setWindowSize(1320, 768);
   },
@@ -25,9 +27,9 @@ const config = {
   reporters: [
     'spec',
     [video, {
-      saveAllVideos: true,       // If true, also saves videos for successful test cases
+      saveAllVideos: true, // If true, also saves videos for successful test cases
       videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-      videoRenderTimeout: 5,      // Max seconds to wait for a video to finish rendering
+      videoRenderTimeout: 5, // Max seconds to wait for a video to finish rendering
     }],
     ['allure', {
       outputDir: './_results_/allure-raw',
@@ -44,8 +46,7 @@ const config = {
   services: [
     'selenium-standalone',
   ],
-  capabilities: [
-    {
+  capabilities: [{
       maxInstances: 1,
       browserName: 'chrome',
     },
@@ -61,7 +62,7 @@ const config = {
   // Some nice defaults
   // ==================
   specs: [
-    './src/specs/**/*.e2e.js',
+    './src/features/**/*.feature',
   ],
   deprecationWarnings: true,
   maxInstances: 10,
@@ -71,11 +72,23 @@ const config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
-  framework: 'jasmine',
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 100000,
-    expectationResultHandler: function(passed, assertion) {
-    }
+  framework: 'cucumber',
+  cucumberOpts: {
+    requireModule: ['@babel/register'],
+    require: ['./src/steps/*.steps.js'],
+    backtrace: false,
+    compiler: [],
+    dryRun: false,
+    failFast: false,
+    format: ['pretty'],
+    colors: true,
+    snippets: true,
+    source: true,
+    profile: [],
+    strict: false,
+    tags: [],
+    timeout: 60000,
+    ignoreUndefinedDefinitions: false,
   },
 };
 
