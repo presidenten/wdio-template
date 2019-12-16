@@ -1,11 +1,8 @@
-require('module-alias/register');
 require('@babel/register')({
-  presets: [
-    [
-      '@babel/preset-env',
-      { targets: { node: 8 } },
-    ]
-  ],
+  presets: [[
+    '@babel/preset-env',
+    { targets: { node: 8 } },
+  ]],
   babelrc: false,
 });
 
@@ -13,8 +10,7 @@ const video = require('wdio-video-reporter');
 
 const config = {
   // Setup the browser window
-  before: function(capabilities, specs) {
-    browser.setWindowPosition(0, 0);
+  before: function (capabilities, specs) {
     browser.setWindowSize(1320, 768);
   },
 
@@ -27,15 +23,15 @@ const config = {
   reporters: [
     'spec',
     [video, {
-      saveAllVideos: true, // If true, also saves videos for successful test cases
+      saveAllVideos: false,       // If true, also saves videos for successful test cases
       videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-      videoRenderTimeout: 5, // Max seconds to wait for a video to finish rendering
+      videoRenderTimeout: 5,      // Max seconds to wait for a video to finish rendering
     }],
     ['allure', {
       outputDir: './_results_/allure-raw',
       disableWebdriverStepsReporting: true,
       disableWebdriverScreenshotsReporting: true,
-      useCucumberStepReporter: true
+      useCucumberStepReporter: true,
     }],
   ],
 
@@ -47,7 +43,8 @@ const config = {
   services: [
     'selenium-standalone',
   ],
-  capabilities: [{
+  capabilities: [
+    {
       maxInstances: 1,
       browserName: 'chrome',
     },
@@ -62,21 +59,25 @@ const config = {
   // ==================
   // Some nice defaults
   // ==================
-  specs: [
-    './src/features/**/*.feature',
-  ],
   deprecationWarnings: true,
   maxInstances: 10,
   sync: true,
   coloredLogs: true,
-  bail: 1,
+  bail: 0,
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+
+  // =================
+  // Cucumber settings
+  // =================
+  specs: [
+    './src/**/*.feature',
+  ],
   framework: 'cucumber',
   cucumberOpts: {
     requireModule: ['@babel/register'],
-    require: ['./src/steps/*.steps.js'],
+    require: ['./src/**/*.steps.js'],
     backtrace: false,
     compiler: [],
     dryRun: false,
@@ -87,7 +88,7 @@ const config = {
     source: true,
     profile: [],
     strict: false,
-    tags: [],
+    tagExpression: [],
     timeout: 60000,
     ignoreUndefinedDefinitions: false,
   },
@@ -96,3 +97,4 @@ const config = {
 module.exports = {
   config,
 };
+

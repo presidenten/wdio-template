@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   chrome:
-    image: selenium/node-chrome-debug:3.141.59-gold
+    image: selenium/node-chrome-debug:3.141.59-yttrium
     ports:
       - 5901:5900
     depends_on:
@@ -15,7 +15,7 @@ services:
     entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME" /opt/bin/entry_point.sh'
 
   firefox:
-    image: selenium/node-firefox-debug:3.141.59-gold
+    image: selenium/node-firefox-debug:3.141.59-yttrium
     ports:
       - 5902:5900
     depends_on:
@@ -29,6 +29,6 @@ services:
     entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME" /opt/bin/entry_point.sh'
 
   hub:
-    image: selenium/hub:3.141.59-gold
+    image: selenium/hub:3.141.59-yttrium
     ports:
       - "4444:4444"
