@@ -8,8 +8,7 @@
     "lintfix": "eslint --fix --ext .js --ignore-path .gitignore src",
     "pree2e": "rimraf _results_/*; mkdirp _results_/allure-raw",
     "e2e": "wdio wdio.conf.js",
-    "report": "allure generate _results_/allure-raw -o _results_/allure --clean",
-    "postreport": "open http://localhost:8081/index.html && autoreload-server _results_/allure 8081"
+    "report": "allure generate _results_/allure-raw -o _results_/allure --clean && allure open _results_/allure"
   },
   "author": "",
   "license": "MIT",
@@ -42,9 +41,7 @@
     "junit-viewer": "^4.11.1",
     "module-alias": "^2.2.2",
     "nodemailer": "^5.1.1",
-    "open": "^6.0.0",
     "rimraf": "^2.7.1",
-    "simple-autoreload-server": "^0.2.7",
     "wdio-video-reporter": "^1.4.4",
     "webdriverio": "^5.16.15"
   },
