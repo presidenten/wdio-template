@@ -761,7 +761,7 @@
   resolved "https://registry.yarnpkg.com/@ffmpeg-installer/darwin-x64/-/darwin-x64-4.1.0.tgz#48e1706c690e628148482bfb64acb67472089aaa"
   integrity sha512-Z4EyG3cIFjdhlY8wI9aLUXuH8nVt7E9SlMVZtWvSPnm2sm37/yC2CwjUzyCQbJbySnef1tQwGG2Sx+uWhd9IAw==
 
-"@ffmpeg-installer/ffmpeg@^1.0.19":
+"@ffmpeg-installer/ffmpeg@^1.0.20":
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/@ffmpeg-installer/ffmpeg/-/ffmpeg-1.0.20.tgz#d3c9c2bbcd76149468fb0886c2b3fe9e4795490b"
   integrity sha512-wbgd//6OdwbFXYgV68ZyKrIcozEQpUKlvV66XHaqO2h3sFbX0jYLzx62Q0v8UcFWN21LoxT98NU2P+K0OWsKNA==
@@ -821,12 +821,20 @@
   dependencies:
     "@types/node" "*"
 
-"@wdio/allure-reporter@^5.10.10", "@wdio/allure-reporter@^5.16.11":
+"@wdio/allure-reporter@^5.16.11":
   version "5.16.11"
   resolved "https://registry.yarnpkg.com/@wdio/allure-reporter/-/allure-reporter-5.16.11.tgz#df73bae59abcd91ccc5bfb1eb9de7207e75490b9"
   integrity sha512-T5lUC6+CYRQhrrGaOjsX7uO9pD8qz0W85Dzd64jwirOOUyWrNNcRvIMboymEW1Zw8oiJkOp7Dkcpoig9rSz2jg==
   dependencies:
     "@wdio/reporter" "5.15.2"
+    allure-js-commons "^1.3.2"
+
+"@wdio/allure-reporter@^5.22.4":
+  version "5.22.4"
+  resolved "https://registry.yarnpkg.com/@wdio/allure-reporter/-/allure-reporter-5.22.4.tgz#3d0e3a5d28db5ea37fb1f1c356ed76b130d9aac3"
+  integrity sha512-iE6LOlrkBSt6JsKxsI2tzaUjUJx+dz9yHVl0yoBW/NYBzxE0sn/0jr8OR+lUV35GdIi90D59MMIrZ/BYS1occA==
+  dependencies:
+    "@wdio/reporter" "5.22.4"
     allure-js-commons "^1.3.2"
 
 "@wdio/cli@^5.16.15":
@@ -919,10 +927,10 @@
   dependencies:
     fs-extra "^8.0.1"
 
-"@wdio/reporter@^5.9.3":
-  version "5.9.3"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-5.9.3.tgz#310a9f3eb31b67d5c7d612db8882a4b1c39326c4"
-  integrity sha512-jZ1LOUYINxMzvhJR5wDfnOvE2oeSEjRmvlzh2mZKSz+2gC7tg11XUk89f8KRBUmWL0n8TBTPMCm5Qxe4KOPH3A==
+"@wdio/reporter@5.22.4", "@wdio/reporter@^5.22.4":
+  version "5.22.4"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-5.22.4.tgz#d0ae86980e694e56604fd3f745c55e58335eceef"
+  integrity sha512-y/HIKGJHsKXroWWH1B7upynoYmFMuAwJs3LEVwdnpiJIBF4DxzIrRGCY/SSA6U1a/+cRTdI5m1+vA1gcFxcmwQ==
   dependencies:
     fs-extra "^8.0.1"
 
@@ -3619,6 +3627,11 @@ minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
 
+minimist@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
+  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+
 minipass@^2.2.1, minipass@^2.3.4:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.3.5.tgz#cacebe492022497f656b0f0f51e2682a9ed2d848"
@@ -3648,6 +3661,13 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+mkdirp@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
+  integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
+  dependencies:
+    minimist "^1.2.5"
 
 module-alias@^2.2.2:
   version "2.2.2"
@@ -5227,16 +5247,16 @@ wcwidth@>=1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-wdio-video-reporter@^1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/wdio-video-reporter/-/wdio-video-reporter-1.4.4.tgz#3e3d1b2ada69b1c31374a05d8c1a3fc194570d4a"
-  integrity sha512-Fot6H3MFfOBzU4Z9gz57Iwqk9sSV9y6zbJu6uAwg8ZHES7OeAvYoxSK7ubm/5ha3+PYCyYlmkgR56QT6TDHpuw==
+wdio-video-reporter@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/wdio-video-reporter/-/wdio-video-reporter-2.0.1.tgz#a8913fef9137dadfd90283a5543f362de98eb827"
+  integrity sha512-L1OS0sYNi7u5vjmufIB7+XIfoXL5w8nbzanWq5isIyb76y2N5lmMtOvfNe75ry/LtwaPoFQl9my+dRH+7x9vZg==
   dependencies:
-    "@ffmpeg-installer/ffmpeg" "^1.0.19"
-    "@wdio/allure-reporter" "^5.10.10"
-    "@wdio/reporter" "^5.9.3"
+    "@ffmpeg-installer/ffmpeg" "^1.0.20"
+    "@wdio/allure-reporter" "^5.22.4"
+    "@wdio/reporter" "^5.22.4"
     fs-extra "^6.0.1"
-    mkdirp "^0.5.1"
+    mkdirp "^0.5.5"
 
 webdriver@5.16.15:
   version "5.16.15"

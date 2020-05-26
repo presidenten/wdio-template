@@ -43,7 +43,7 @@
     "module-alias": "^2.2.2",
     "nodemailer": "^5.1.1",
     "rimraf": "^2.7.1",
-    "wdio-video-reporter": "^1.4.4",
+    "wdio-video-reporter": "^2.0.1",
     "webdriverio": "^5.16.15"
   },
   "devDependencies": {}
