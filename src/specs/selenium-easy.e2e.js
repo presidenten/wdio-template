@@ -4,6 +4,10 @@ import selectors from '@/helpers/selectors.js';
 describe('User interactions', () => {
   beforeEach(() => {
     browser.url(config.url);
+    const lightbox = '#at-cv-lightbox-close';
+    if ($(lightbox).isExisting()) {
+      $(lightbox).click();
+    }
   });
 
   it ('should be able to edit input (should pass)', () => {
