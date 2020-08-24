@@ -4,6 +4,7 @@ import selectors from '@/helpers/selectors.js';
 describe('User interactions', () => {
   beforeEach(() => {
     browser.url(config.url);
+    browser.pause(300); // avoid animation effect
     const lightbox = '#at-cv-lightbox-close';
     if ($(lightbox).isExisting()) {
       $(lightbox).click();
