@@ -1,4 +1,4 @@
-Webdriver IO v5 template
+Webdriver IO v6 template
 ========================
 
 ![Logo](https://raw.githubusercontent.com/presidenten/wdio-video-reporter-example-report/master/wdio-video-reporter.png)
