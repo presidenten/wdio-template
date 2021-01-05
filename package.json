@@ -30,7 +30,7 @@
     "@wdio/sync": "^6.4.0",
     "add": "^2.0.6",
     "allure-commandline": "^2.13.0",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.7.0",
     "eslint-config-standard": "^14.1.1",
